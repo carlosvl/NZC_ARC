@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelationshipGraphDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isActive>true</isActive>
+    <isTemplate>false</isTemplate>
+    <masterLabel>Programs ARC v2</masterLabel>
+    <relationshipGraphDefVersions>
+        <graphDefinition>{
+  &quot;graph&quot; : {
+    &quot;rootNode&quot; : {
+      &quot;sortFields&quot; : [ {
+        &quot;field&quot; : {
+          &quot;field&quot; : &quot;LastModifiedDate&quot;,
+          &quot;whichEntity&quot; : &quot;TARGET&quot;
+        },
+        &quot;order&quot; : &quot;DESC&quot;
+      } ],
+      &quot;id&quot; : &quot;b303d8d5-36bd-463a-b42d-ce903fcfaca8&quot;,
+      &quot;object&quot; : {
+        &quot;entity&quot; : &quot;Program&quot;
+      },
+      &quot;configurationType&quot; : &quot;Primary&quot;,
+      &quot;nodeUiConfig&quot; : {
+        &quot;label&quot; : &quot;Program&quot;,
+        &quot;fieldsToDisplay&quot; : [ ],
+        &quot;showFieldLabels&quot; : true,
+        &quot;actions&quot; : { },
+        &quot;isAnchorNode&quot; : true
+      },
+      &quot;childRelationships&quot; : [ {
+        &quot;OneToMany&quot; : {
+          &quot;targetObjectNode&quot; : {
+            &quot;sortFields&quot; : [ {
+              &quot;field&quot; : {
+                &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              },
+              &quot;order&quot; : &quot;DESC&quot;
+            } ],
+            &quot;id&quot; : &quot;bd934a9a-5293-4e2f-aa11-f536b6ade06c&quot;,
+            &quot;object&quot; : {
+              &quot;entity&quot; : &quot;ProgramEnrollment&quot;
+            },
+            &quot;configurationType&quot; : &quot;Primary&quot;,
+            &quot;nodeUiConfig&quot; : {
+              &quot;label&quot; : &quot;Program Enrollments&quot;,
+              &quot;recordActionsLabel&quot; : &quot;Clone&quot;,
+              &quot;isAnchorNode&quot; : false,
+              &quot;fieldsToDisplay&quot; : [ ],
+              &quot;showFieldLabels&quot; : true,
+              &quot;actions&quot; : {
+                &quot;containerActions&quot; : [ {
+                  &quot;action&quot; : &quot;New&quot;
+                } ],
+                &quot;recordActions&quot; : [ {
+                  &quot;action&quot; : &quot;Clone&quot;
+                } ]
+              }
+            },
+            &quot;childRelationships&quot; : [ ]
+          },
+          &quot;relationshipUiConfig&quot; : { },
+          &quot;filter&quot; : {
+            &quot;filterCriteria&quot; : [ ],
+            &quot;booleanFilter&quot; : &quot;&quot;
+          },
+          &quot;targetObjectField&quot; : {
+            &quot;field&quot; : &quot;ProgramId&quot;,
+            &quot;whichEntity&quot; : &quot;TARGET&quot;
+          }
+        }
+      }, {
+        &quot;OneToMany&quot; : {
+          &quot;targetObjectNode&quot; : {
+            &quot;sortFields&quot; : [ {
+              &quot;field&quot; : {
+                &quot;field&quot; : &quot;CreatedDate&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              },
+              &quot;order&quot; : &quot;ASC&quot;
+            } ],
+            &quot;id&quot; : &quot;c8898ace-1a65-4946-a564-494101ac0387&quot;,
+            &quot;object&quot; : {
+              &quot;entity&quot; : &quot;IndicatorAssignment&quot;
+            },
+            &quot;configurationType&quot; : &quot;Primary&quot;,
+            &quot;nodeUiConfig&quot; : {
+              &quot;label&quot; : &quot;KPIs (Indicator Assignments)&quot;,
+              &quot;recordActionsLabel&quot; : &quot;&quot;,
+              &quot;isAnchorNode&quot; : false,
+              &quot;flexcard&quot; : {
+                &quot;flexcardName&quot; : &quot;NZCFCIndicatorAssignment&quot;,
+                &quot;flexcardAttributes&quot; : &quot;&quot;
+              }
+            },
+            &quot;childRelationships&quot; : [ {
+              &quot;OneToMany&quot; : {
+                &quot;targetObjectNode&quot; : {
+                  &quot;sortFields&quot; : [ {
+                    &quot;field&quot; : {
+                      &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    },
+                    &quot;order&quot; : &quot;DESC&quot;
+                  } ],
+                  &quot;id&quot; : &quot;6076a0bd-2561-4f25-b882-ad03a3ca7ebc&quot;,
+                  &quot;object&quot; : {
+                    &quot;entity&quot; : &quot;IndicatorPerformancePeriod&quot;
+                  },
+                  &quot;configurationType&quot; : &quot;Custom&quot;,
+                  &quot;nodeUiConfig&quot; : {
+                    &quot;label&quot; : &quot;Targets&quot;,
+                    &quot;recordActionsLabel&quot; : &quot;&quot;,
+                    &quot;isAnchorNode&quot; : false,
+                    &quot;fieldsToDisplay&quot; : [ {
+                      &quot;field&quot; : &quot;TargetProgress&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    }, {
+                      &quot;field&quot; : &quot;TargetValue&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    }, {
+                      &quot;field&quot; : &quot;BaselineValue&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    }, {
+                      &quot;field&quot; : &quot;LastResultValue&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    } ],
+                    &quot;showFieldLabels&quot; : true,
+                    &quot;actions&quot; : {
+                      &quot;containerActions&quot; : [ ],
+                      &quot;recordActions&quot; : [ ]
+                    }
+                  },
+                  &quot;childRelationships&quot; : [ ]
+                },
+                &quot;relationshipUiConfig&quot; : { },
+                &quot;filter&quot; : {
+                  &quot;filterCriteria&quot; : [ ],
+                  &quot;booleanFilter&quot; : &quot;&quot;
+                },
+                &quot;targetObjectField&quot; : {
+                  &quot;field&quot; : &quot;IndicatorAssignmentId&quot;,
+                  &quot;whichEntity&quot; : &quot;TARGET&quot;
+                }
+              }
+            } ]
+          },
+          &quot;relationshipUiConfig&quot; : { },
+          &quot;filter&quot; : {
+            &quot;filterCriteria&quot; : [ ],
+            &quot;booleanFilter&quot; : &quot;&quot;
+          },
+          &quot;targetObjectField&quot; : {
+            &quot;field&quot; : &quot;ProgramId&quot;,
+            &quot;whichEntity&quot; : &quot;TARGET&quot;
+          }
+        }
+      }, {
+        &quot;OneToMany&quot; : {
+          &quot;targetObjectNode&quot; : {
+            &quot;sortFields&quot; : [ {
+              &quot;field&quot; : {
+                &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                &quot;whichEntity&quot; : &quot;TARGET&quot;
+              },
+              &quot;order&quot; : &quot;DESC&quot;
+            } ],
+            &quot;id&quot; : &quot;5a089370-2538-4a11-bae7-96127d97b190&quot;,
+            &quot;object&quot; : {
+              &quot;entity&quot; : &quot;ProgramInitiative&quot;
+            },
+            &quot;configurationType&quot; : &quot;Primary&quot;,
+            &quot;nodeUiConfig&quot; : {
+              &quot;label&quot; : &quot;Program Initiatives&quot;,
+              &quot;recordActionsLabel&quot; : &quot;Edit&quot;,
+              &quot;isAnchorNode&quot; : false,
+              &quot;fieldsToDisplay&quot; : [ ],
+              &quot;showFieldLabels&quot; : true,
+              &quot;actions&quot; : {
+                &quot;containerActions&quot; : [ {
+                  &quot;action&quot; : &quot;New&quot;
+                } ],
+                &quot;recordActions&quot; : [ {
+                  &quot;action&quot; : &quot;Edit&quot;
+                } ]
+              }
+            },
+            &quot;childRelationships&quot; : [ {
+              &quot;OneToMany&quot; : {
+                &quot;targetObjectNode&quot; : {
+                  &quot;sortFields&quot; : [ {
+                    &quot;field&quot; : {
+                      &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    },
+                    &quot;order&quot; : &quot;DESC&quot;
+                  } ],
+                  &quot;id&quot; : &quot;d5c95c17-f1d3-4c89-97f0-b8e0f902b35a&quot;,
+                  &quot;object&quot; : {
+                    &quot;entity&quot; : &quot;ProgramInitiativeEnrl&quot;
+                  },
+                  &quot;configurationType&quot; : &quot;Primary&quot;,
+                  &quot;nodeUiConfig&quot; : {
+                    &quot;label&quot; : &quot;Initiative Enrollments&quot;,
+                    &quot;recordActionsLabel&quot; : &quot;&quot;,
+                    &quot;isAnchorNode&quot; : false,
+                    &quot;fieldsToDisplay&quot; : [ ],
+                    &quot;showFieldLabels&quot; : true,
+                    &quot;actions&quot; : {
+                      &quot;containerActions&quot; : [ ],
+                      &quot;recordActions&quot; : [ ]
+                    }
+                  },
+                  &quot;childRelationships&quot; : [ ]
+                },
+                &quot;relationshipUiConfig&quot; : { },
+                &quot;filter&quot; : {
+                  &quot;filterCriteria&quot; : [ ],
+                  &quot;booleanFilter&quot; : &quot;&quot;
+                },
+                &quot;targetObjectField&quot; : {
+                  &quot;field&quot; : &quot;ProgramInitiativeId&quot;,
+                  &quot;whichEntity&quot; : &quot;TARGET&quot;
+                }
+              }
+            }, {
+              &quot;OneToMany&quot; : {
+                &quot;targetObjectNode&quot; : {
+                  &quot;sortFields&quot; : [ {
+                    &quot;field&quot; : {
+                      &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                      &quot;whichEntity&quot; : &quot;TARGET&quot;
+                    },
+                    &quot;order&quot; : &quot;DESC&quot;
+                  } ],
+                  &quot;id&quot; : &quot;1e057dbe-6f97-4fef-9b66-4687616d0226&quot;,
+                  &quot;object&quot; : {
+                    &quot;entity&quot; : &quot;IndicatorAssignment&quot;
+                  },
+                  &quot;configurationType&quot; : &quot;Custom&quot;,
+                  &quot;nodeUiConfig&quot; : {
+                    &quot;label&quot; : &quot;KPIs (Indicator Assignments)&quot;,
+                    &quot;recordActionsLabel&quot; : &quot;&quot;,
+                    &quot;isAnchorNode&quot; : false,
+                    &quot;flexcard&quot; : {
+                      &quot;flexcardName&quot; : &quot;NZCFCIndicatorAssignment&quot;,
+                      &quot;flexcardAttributes&quot; : &quot;&quot;
+                    }
+                  },
+                  &quot;childRelationships&quot; : [ {
+                    &quot;OneToMany&quot; : {
+                      &quot;targetObjectNode&quot; : {
+                        &quot;sortFields&quot; : [ {
+                          &quot;field&quot; : {
+                            &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                            &quot;whichEntity&quot; : &quot;TARGET&quot;
+                          },
+                          &quot;order&quot; : &quot;DESC&quot;
+                        } ],
+                        &quot;id&quot; : &quot;373abac6-8a1f-47ff-91c0-78121c083bf8&quot;,
+                        &quot;object&quot; : {
+                          &quot;entity&quot; : &quot;IndicatorPerformancePeriod&quot;
+                        },
+                        &quot;configurationType&quot; : &quot;Primary&quot;,
+                        &quot;nodeUiConfig&quot; : {
+                          &quot;label&quot; : &quot;Targets&quot;,
+                          &quot;recordActionsLabel&quot; : &quot;&quot;,
+                          &quot;isAnchorNode&quot; : false,
+                          &quot;fieldsToDisplay&quot; : [ {
+                            &quot;field&quot; : &quot;TargetProgress&quot;,
+                            &quot;whichEntity&quot; : &quot;TARGET&quot;
+                          }, {
+                            &quot;field&quot; : &quot;TargetValue&quot;,
+                            &quot;whichEntity&quot; : &quot;TARGET&quot;
+                          }, {
+                            &quot;field&quot; : &quot;BaselineValue&quot;,
+                            &quot;whichEntity&quot; : &quot;TARGET&quot;
+                          } ],
+                          &quot;showFieldLabels&quot; : true,
+                          &quot;actions&quot; : {
+                            &quot;containerActions&quot; : [ ],
+                            &quot;recordActions&quot; : [ ]
+                          }
+                        },
+                        &quot;childRelationships&quot; : [ {
+                          &quot;OneToMany&quot; : {
+                            &quot;targetObjectNode&quot; : {
+                              &quot;sortFields&quot; : [ {
+                                &quot;field&quot; : {
+                                  &quot;field&quot; : &quot;LastModifiedDate&quot;,
+                                  &quot;whichEntity&quot; : &quot;TARGET&quot;
+                                },
+                                &quot;order&quot; : &quot;DESC&quot;
+                              } ],
+                              &quot;id&quot; : &quot;0a4a2599-e789-4ea5-97a2-66f168f1415c&quot;,
+                              &quot;object&quot; : {
+                                &quot;entity&quot; : &quot;IndicatorResult&quot;
+                              },
+                              &quot;configurationType&quot; : &quot;Primary&quot;,
+                              &quot;nodeUiConfig&quot; : {
+                                &quot;label&quot; : &quot;Results Measurements&quot;,
+                                &quot;recordActionsLabel&quot; : &quot;&quot;,
+                                &quot;isAnchorNode&quot; : false,
+                                &quot;fieldsToDisplay&quot; : [ {
+                                  &quot;field&quot; : &quot;IndicatorPerformancePeriod.Name&quot;,
+                                  &quot;whichEntity&quot; : &quot;TARGET&quot;,
+                                  &quot;labelOverride&quot; : &quot;Period&quot;
+                                }, {
+                                  &quot;field&quot; : &quot;Type&quot;,
+                                  &quot;whichEntity&quot; : &quot;TARGET&quot;,
+                                  &quot;labelOverride&quot; : &quot;Measurement type&quot;
+                                }, {
+                                  &quot;field&quot; : &quot;ResultValue&quot;,
+                                  &quot;whichEntity&quot; : &quot;TARGET&quot;,
+                                  &quot;labelOverride&quot; : &quot;Value&quot;
+                                } ],
+                                &quot;showFieldLabels&quot; : true,
+                                &quot;actions&quot; : {
+                                  &quot;containerActions&quot; : [ ],
+                                  &quot;recordActions&quot; : [ ]
+                                }
+                              },
+                              &quot;childRelationships&quot; : [ ]
+                            },
+                            &quot;relationshipUiConfig&quot; : { },
+                            &quot;filter&quot; : {
+                              &quot;filterCriteria&quot; : [ ],
+                              &quot;booleanFilter&quot; : &quot;&quot;
+                            },
+                            &quot;targetObjectField&quot; : {
+                              &quot;field&quot; : &quot;IndicatorPerformancePeriodId&quot;,
+                              &quot;whichEntity&quot; : &quot;TARGET&quot;
+                            }
+                          }
+                        } ]
+                      },
+                      &quot;relationshipUiConfig&quot; : { },
+                      &quot;filter&quot; : {
+                        &quot;filterCriteria&quot; : [ ],
+                        &quot;booleanFilter&quot; : &quot;&quot;
+                      },
+                      &quot;targetObjectField&quot; : {
+                        &quot;field&quot; : &quot;IndicatorAssignmentId&quot;,
+                        &quot;whichEntity&quot; : &quot;TARGET&quot;
+                      }
+                    }
+                  } ]
+                },
+                &quot;relationshipUiConfig&quot; : { },
+                &quot;filter&quot; : {
+                  &quot;filterCriteria&quot; : [ ],
+                  &quot;booleanFilter&quot; : &quot;&quot;
+                },
+                &quot;targetObjectField&quot; : {
+                  &quot;field&quot; : &quot;ProgramInitiativeId&quot;,
+                  &quot;whichEntity&quot; : &quot;TARGET&quot;
+                }
+              }
+            } ]
+          },
+          &quot;relationshipUiConfig&quot; : { },
+          &quot;filter&quot; : {
+            &quot;filterCriteria&quot; : [ ],
+            &quot;booleanFilter&quot; : &quot;&quot;
+          },
+          &quot;targetObjectField&quot; : {
+            &quot;field&quot; : &quot;ProgramId&quot;,
+            &quot;whichEntity&quot; : &quot;TARGET&quot;
+          }
+        }
+      } ]
+    },
+    &quot;globalUiConfig&quot; : {
+      &quot;allowRuntimeCustomizations&quot; : true
+    }
+  }
+}</graphDefinition>
+        <graphType>HorizontalHierarchy</graphType>
+    </relationshipGraphDefVersions>
+</RelationshipGraphDefinition>
